@@ -1,0 +1,2 @@
+//OnGameStart();
+global.Paused = false;
