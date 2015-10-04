@@ -59,6 +59,7 @@
     <instance objName="obj_tinyBox" x="1088" y="1088" name="inst_086A9A70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="832" y="1056" name="inst_D5F84A5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_shittytable" x="1344" y="1088" name="inst_9EFA1D04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_HUDManager" x="160" y="1280" name="inst_7A6BB22B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

@@ -57,6 +57,7 @@
     <object>objects\obj_tinyBox</object>
     <object>objects\obj_box</object>
     <object>objects\obj_shittytable</object>
+    <object>objects\obj_HUDManager</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mall</room>

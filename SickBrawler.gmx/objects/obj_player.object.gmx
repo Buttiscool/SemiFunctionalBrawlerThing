@@ -102,17 +102,41 @@ depth = -y; // Sets depth of character based on y pos in level
           <argument>
             <kind>1</kind>
             <string>
+var sprnt = 1;// if it = 0 you'll be multiplying movement by 0...
 scr_get_gamepad_input(0);
-scr_move_axis(xaxis, yaxis, 0, 5);
-
-xaxis = 0;
-yaxis = 0;
 
 //Jump
 if gamepad_button_check_pressed(0, gp_face1) &amp;&amp; z = z_bottom
 {
     z_speed = 12;
 }
+//Sprint
+//NOTE:
+//There needs to be an addition for when the player reachs 0 STM the script waits
+//a few frames before regen.  This way the player won't hold down sprint
+//forever and weirdly move about the screen as it currently works.
+if gamepad_button_check(0, gp_face3) &amp;&amp; global.Player1_STM &gt; 0 
+{   
+    sprnt = 4;
+    
+    global.Player1_STM -= 1; //Rate of decay for STM when Sprinting
+    
+} else {
+    sprnt = 1;
+    global.Player1_STM += 0.1;//regen of STM
+    if global.Player1_STM == 100 {
+    global.Player1_STM = 100;
+    }
+}
+//
+//
+//This needs to be init after variables specific to controlling it are created...
+scr_move_axis(xaxis, yaxis, 0, 5, sprnt);
+
+
+xaxis = 0;
+yaxis = 0;
+
 
 //Implant Gravity
 z_speed -= z_gravity;
